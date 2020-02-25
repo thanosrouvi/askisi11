@@ -1,0 +1,24 @@
+p=[]
+fin=open("num.txt","w")
+fin.write("1234/n""4567/n""7890/n")
+fin.close()
+fin=open("num.txt","r")
+p=fin.read()
+fin.close()
+n=[]
+r=len(p)
+n=[int(x) for x in p]
+for i in range (6):
+     ar= input ("dwse arithmo")
+     n.append(ar)
+g=(set(p)&set(n))
+print(g)
+w=len(g)
+while(w!=2) :
+     for i in range (6):
+          ar= input ("dwse arithmo jana")
+          n.append(ar)
+          g=(set(p)&set(n))
+          print(g)
+          w=len(g)
+print(g )
